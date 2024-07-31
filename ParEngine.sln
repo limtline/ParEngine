@@ -11,6 +11,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ParEngine_Source", "ParEngi
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ParEngine_Source\ParEngine_Source.vcxitems*{0d50460f-5032-48f3-995b-5b65ebcd6178}*SharedItemsImports = 4
 		ParEngine_Source\ParEngine_Source.vcxitems*{53bec884-728c-4d53-8ac9-0a7d3c253c8f}*SharedItemsImports = 4
 		ParEngine_Source\ParEngine_Source.vcxitems*{62846d4e-72e8-4090-bdd1-1a2c3091f1f0}*SharedItemsImports = 9
 	EndGlobalSection
