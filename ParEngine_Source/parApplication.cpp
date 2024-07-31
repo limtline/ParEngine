@@ -1,5 +1,5 @@
 #include "parApplication.h"
-
+#include "parInput.h"
 
 namespace par
 {
@@ -15,6 +15,8 @@ namespace par
 		mHdc = GetDC(hwnd); // DC를 가져오는 함수 GetDC
 
 		mPlayer.SetPosition(0.0f, 0.0f);
+
+		parInput::Initailize();
 	}
 
 	void parApplication::Run()
@@ -26,6 +28,8 @@ namespace par
 
 	void parApplication::Update()
 	{
+		parInput::Update();
+
 		mPlayer.Update();
 	}
 
