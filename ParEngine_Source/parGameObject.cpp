@@ -1,41 +1,57 @@
 #include "parGameObject.h"
 #include "parInput.h"
+#include "parTime.h"
 
 namespace par
 {
-	par::parGameObject::parGameObject()
+	par::GameObject::GameObject() : mX(0.0f), mY(0.0f)
 	{
 	}
 
-	par::parGameObject::~parGameObject()
+	par::GameObject::~GameObject()
 	{
 	}
 
-	void par::parGameObject::Update()
+	void par::GameObject::Update()
 	{
-		if (parInput::GetKey(eKeyCode::A))
+		const float speed = 100.0f;
+
+		if (Input::GetKey(eKeyCode::A))
 		{
-			mX -= 0.01f;
+			mX -= speed * Time::DelatTime();
 		}
-		if (parInput::GetKey(eKeyCode::D))
+		if (Input::GetKey(eKeyCode::D))
 		{
-			mX += 0.01f;
+			mX += speed * Time::DelatTime();
 		}
-		if (parInput::GetKey(eKeyCode::W))
+		if (Input::GetKey(eKeyCode::W))
 		{
-			mY -= 0.01;
+			mY -= speed * Time::DelatTime();
 		}
-		if (parInput::GetKey(eKeyCode::S))
+		if (Input::GetKey(eKeyCode::S))
 		{
-			mY += 0.01f;
+			mY += speed * Time::DelatTime();
 		}
 	}
 
-	void par::parGameObject::LateUpdate()
+	void par::GameObject::LateUpdate()
 	{
 	}
 
-	void par::parGameObject::Render(HDC hdc)
+	void par::GameObject::Render(HDC hdc)
 	{
+		HBRUSH blueBresh = CreateSolidBrush(RGB(0, 0, 255));
+
+		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, blueBresh);
+
+		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
+		HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
+		SelectObject(hdc, oldPen);
+
+		Rectangle(hdc, 100 + mX, 100 + mY, 200 + mX, 200 + mY);
+
+		SelectObject(hdc, oldBrush);
+		DeleteObject(blueBresh);
+		DeleteObject(redPen);
 	}
 }

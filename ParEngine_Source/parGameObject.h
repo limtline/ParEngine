@@ -4,11 +4,11 @@
 namespace par
 {
 	// Actor
-	class parGameObject
+	class GameObject
 	{
 	public:
-		parGameObject();
-		~parGameObject();
+		GameObject();
+		~GameObject();
 
 		void Update();
 		void LateUpdate();

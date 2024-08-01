@@ -19,7 +19,7 @@ namespace par
 		End,
 	};
 
-	class parInput
+	class Input
 	{
 	public:
 		struct Key
@@ -31,20 +31,20 @@ namespace par
 		static void Initailize();
 		static void Update();
 
-		static bool GetKeyDown(eKeyCode code) { return mKeys[(UINT)code].state == eKeyState::Down; }
-		static bool GetKeyUP(eKeyCode code) { return mKeys[(UINT)code].state == eKeyState::Up; }
-		static bool GetKey(eKeyCode code) { return mKeys[(UINT)code].state == eKeyState::Pressed; }
+		static bool GetKeyDown(eKeyCode code) { return Keys[(UINT)code].state == eKeyState::Down; }
+		static bool GetKeyUP(eKeyCode code) { return Keys[(UINT)code].state == eKeyState::Up; }
+		static bool GetKey(eKeyCode code) { return Keys[(UINT)code].state == eKeyState::Pressed; }
 
 	private:
-		static void createKeys();
-		static void updateKeys();
-		static void updateKey(parInput::Key& key);
-		static bool isKeyDown(eKeyCode code);
-		static void updateKeyDown(parInput::Key& key);
-		static void updateKeyUp(parInput::Key& key);
+		static void CreateKeys();
+		static void UpdateKeys();
+		static void UpdateKey(Input::Key& key);
+		static bool IsKeyDown(eKeyCode code);
+		static void UpdateKeyDown(Input::Key& key);
+		static void UpdateKeyUp(Input::Key& key);
 
 	private:
-		static std::vector<Key> mKeys;
+		static std::vector<Key> Keys;
 	};
 }
 

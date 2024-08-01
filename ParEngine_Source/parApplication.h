@@ -4,13 +4,13 @@
 
 namespace par
 {
-	class parApplication
+	class Application
 	{
 	public:
-		parApplication();
-		~parApplication();
+		Application();
+		~Application();
 
-		void Initialize(HWND hwnd );
+		void Initialize(HWND hwnd, UINT width, UINT height);
 		void Run();
 
 		void Update();
@@ -20,6 +20,14 @@ namespace par
 	private:
 		HWND mHwnd;
 		HDC mHdc;
-		parGameObject mPlayer;
+
+		HDC mBackHdc;
+		HBITMAP mBackBitmap; // µµÈ­Áö
+		 
+
+		UINT mWidth;
+		UINT mHeight;
+
+		GameObject mPlayer;
 	};
 }
