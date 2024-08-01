@@ -36,6 +36,14 @@ namespace par
 		static bool GetKey(eKeyCode code) { return mKeys[(UINT)code].state == eKeyState::Pressed; }
 
 	private:
+		static void createKeys();
+		static void updateKeys();
+		static void updateKey(parInput::Key& key);
+		static bool isKeyDown(eKeyCode code);
+		static void updateKeyDown(parInput::Key& key);
+		static void updateKeyUp(parInput::Key& key);
+
+	private:
 		static std::vector<Key> mKeys;
 	};
 }

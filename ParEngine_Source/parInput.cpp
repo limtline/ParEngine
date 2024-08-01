@@ -13,6 +13,11 @@ namespace par
 	};
 	void par::parInput::Initailize()
 	{
+		createKeys();
+	}
+
+	void parInput::createKeys()
+	{
 		mKeys.resize((UINT)eKeyCode::End);
 
 		for (size_t i = 0; i < (UINT)eKeyCode::End; i++)
@@ -28,27 +33,51 @@ namespace par
 
 	void par::parInput::Update()
 	{
-		for (size_t i = 0; i < mKeys.size(); i++)
+		updateKeys();
+	}
+
+	void parInput::updateKeys()
+	{
+		std::for_each(mKeys.begin(), mKeys.end(), [](Key& key)->void
+			{
+				updateKey(key);
+			});
+	}
+	void parInput::updateKey(parInput::Key& key)
+	{
+		if (isKeyDown(key.keyCode))
 		{
-			// 키가 눌렸다
-			if (GetAsyncKeyState(ASCII[i]) & 0x8000)
-			{
-				if (mKeys[i].bPressed == true) 
-					mKeys[i].state = eKeyState::Pressed; // 이전부터 키가 눌려있을 때
-				else
-					mKeys[i].state = eKeyState::Down; // 지금 눌렸을 때
-
-				mKeys[i].bPressed = true;
-			}
-			else  // 키가 안눌렸다
-			{
-				if (mKeys[i].bPressed == true)
-					mKeys[i].state = eKeyState::Up; // 눌렀다 뗐을 때
-				else
-					mKeys[i].state = eKeyState::None; // 애초에 안눌렀을 때
-
-				mKeys[i].bPressed = false;
-			}
+			updateKeyDown(key);
 		}
+		else
+		{
+			updateKeyUp(key);
+		}
+	}
+	bool parInput::isKeyDown(eKeyCode code)
+	{
+		return GetAsyncKeyState(ASCII[(UINT)code]) & 0x8000;
+	}
+
+	// 키를 눌렀을 때
+	void parInput::updateKeyDown(parInput::Key& key)
+	{
+		if (key.bPressed == true)
+			key.state = eKeyState::Pressed;	// 이전에도 키를 눌렸을 때
+		else
+			key.state = eKeyState::Down;	// 지금 키를 눌렀을 때
+
+		key.bPressed = true;
+	}
+
+	// 키를 안눌렸을 때
+	void parInput::updateKeyUp(parInput::Key& key)
+	{
+		if (key.bPressed == true)
+			key.state = eKeyState::Up;	// 눌렀다 뗐을 때
+		else
+			key.state = eKeyState::None;	// 애초에 안눌렀을 때
+
+		key.bPressed = false;
 	}
 }
