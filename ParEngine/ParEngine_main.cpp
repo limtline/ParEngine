@@ -4,6 +4,7 @@
 #include "framework.h"
 #include "ParEngine_main.h"
 #include "..\\ParEngine_Source\\parApplication.h"
+#include "..\\ParEngine_Win\\parLoadScene.h"
 
 #define MAX_LOADSTRING 100
 
@@ -135,6 +136,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+   // load Scenes
+   par::LoadScenes();
 
    return TRUE;
 }

@@ -146,6 +146,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="parLoadScene.h" />
+    <ClInclude Include="parPlayScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="parPlayScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

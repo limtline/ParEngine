@@ -165,6 +165,11 @@
     <Image Include="ParEngine.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParEngine_Win\ParEngine_Win.vcxproj">
+      <Project>{53bec884-728c-4d53-8ac9-0a7d3c253c8f}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
