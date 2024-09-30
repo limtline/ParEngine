@@ -147,9 +147,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="parLoadScene.h" />
+    <ClInclude Include="parPlayer.h" />
     <ClInclude Include="parPlayScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="parPlayer.cpp" />
     <ClCompile Include="parPlayScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

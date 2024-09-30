@@ -16,20 +16,26 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parSpriteRender.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parTime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parTransform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)parApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)parComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)parSpriteRender.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)parTransform.cpp" />
   </ItemGroup>
 </Project>

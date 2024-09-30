@@ -4,54 +4,49 @@
 
 namespace par
 {
-	par::GameObject::GameObject() : mX(0.0f), mY(0.0f)
+	GameObject::GameObject()
 	{
 	}
 
-	par::GameObject::~GameObject()
+	GameObject::~GameObject()
 	{
-	}
-
-	void par::GameObject::Update()
-	{
-		const float speed = 100.0f;
-
-		if (Input::GetKey(eKeyCode::A))
+		for (Component* comp : mComponents)
 		{
-			mX -= speed * Time::DelatTime();
-		}
-		if (Input::GetKey(eKeyCode::D))
-		{
-			mX += speed * Time::DelatTime();
-		}
-		if (Input::GetKey(eKeyCode::W))
-		{
-			mY -= speed * Time::DelatTime();
-		}
-		if (Input::GetKey(eKeyCode::S))
-		{
-			mY += speed * Time::DelatTime();
+			delete comp;
+			comp = nullptr;
 		}
 	}
 
-	void par::GameObject::LateUpdate()
+	void GameObject::Initialize()
 	{
+		for (Component* comp : mComponents)
+		{
+			comp->Initialize();
+		}
 	}
 
-	void par::GameObject::Render(HDC hdc)
+	void GameObject::Update()
 	{
-		HBRUSH blueBresh = CreateSolidBrush(RGB(rand() % 255, rand() % 255 , rand() % 255));
-
-		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, blueBresh);
-
-		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(rand() % 255, rand() % 255, rand() % 255));
-		HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
-		SelectObject(hdc, oldPen);
-
-		Ellipse(hdc, mX, mY, 100 + mX, 100 + mY);
-
-		SelectObject(hdc, oldBrush);
-		DeleteObject(blueBresh);
-		DeleteObject(redPen);
+		for (Component* comp : mComponents)
+		{
+			comp->Update();
+		}
 	}
+
+	void GameObject::LateUpdate()
+	{
+		for (Component* comp : mComponents)
+		{
+			comp->LateUpdate();
+		}
+	}
+
+	void GameObject::Render(HDC hdc)
+	{
+		for (Component* comp : mComponents)
+		{
+			comp->Render(hdc);
+		}
+	}
+
 }
