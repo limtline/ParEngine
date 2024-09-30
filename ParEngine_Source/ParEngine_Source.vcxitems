@@ -20,6 +20,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)parEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parSpriteRender.h" />
@@ -32,6 +34,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)parEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)parMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)parResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parSpriteRender.cpp" />

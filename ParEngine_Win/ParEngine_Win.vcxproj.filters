@@ -4,16 +4,27 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{c5cabb1b-b873-4b2f-abd7-522c30356524}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Contents">
+      <UniqueIdentifier>{1eadb0cc-fcfc-46ec-8da5-754a4495f476}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="parLoadScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="parPlayScene.h" />
-    <ClInclude Include="parPlayer.h" />
+    <ClInclude Include="parPlayScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="parPlayer.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="parPlayScene.cpp" />
-    <ClCompile Include="parPlayer.cpp" />
+    <ClCompile Include="parPlayScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="parPlayer.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

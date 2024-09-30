@@ -17,33 +17,14 @@ namespace par
 	void PlayScene::Initialize()
 	{
 		{
-			Player* pl = new Player();
-			Transform* tr = pl->AddComponent<Transform>();
-			tr->SetPos(800, 450);
+			Player* bg = new Player();
+			Transform* tr = bg->AddComponent<Transform>();
+			tr->SetPos(Vector2(0, 0));
 			tr->SetName(L"TR");
-			SpriteRender* sr = pl->AddComponent<SpriteRender>();
+			SpriteRender* sr = bg->AddComponent<SpriteRender>();
 			sr->SetName(L"SR");
-			AddGameObject(pl);
-		}
-
-		{
-			Player* pl = new Player();
-			Transform* tr = pl->AddComponent<Transform>();
-			tr->SetPos(300, 450);
-			tr->SetName(L"TR");
-			SpriteRender* sr = pl->AddComponent<SpriteRender>();
-			sr->SetName(L"SR");
-			AddGameObject(pl);
-		}
-
-		{
-			Player* pl = new Player();
-			Transform* tr = pl->AddComponent<Transform>();
-			tr->SetPos(100, 650);
-			tr->SetName(L"TR");
-			SpriteRender* sr = pl->AddComponent<SpriteRender>();
-			sr->SetName(L"SR");
-			AddGameObject(pl);
+			sr->ImageLoad(L"C:\\Users\\oww90\\source\\repos\\ParEngine\\Resources\\CloudOcean.png");
+			AddGameObject(bg);
 		}
 	}
 
