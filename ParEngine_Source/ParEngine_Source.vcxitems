@@ -18,8 +18,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)parApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parEnums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parScene.h" />
@@ -29,6 +31,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)parTransform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parEntity.cpp" />

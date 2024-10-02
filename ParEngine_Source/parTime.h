@@ -11,7 +11,7 @@ namespace par
 		static void Update();
 		static void Render(HDC hdc);
 
-		static float DelatTime() { return mDeltaTime; }
+		static float DeltaTime() { return mDeltaTime; }
 
 	private:
 		static LARGE_INTEGER CpuFrequency;

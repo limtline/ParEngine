@@ -2,6 +2,7 @@
 #include "..\\ParEngine_Source\\parSceneManager.h"
 
 #include "parPlayScene.h"
+#include "parTitleScene.h"
 
 //#ifdef _DEBUG
 //#pragma comment(lib,"..\\x64\\Debug\\parEngine_win.lib")
@@ -13,9 +14,9 @@ namespace par
 {
 	void LoadScenes()
 	{
+		SceneManager::CreateScene<TitleScene>(L"TitleScene");
 		SceneManager::CreateScene<PlayScene>(L"PlayScene");
 		//SceneManager::CreateScene<EndScene>(L"EndScene");
-		//SceneManager::CreateScene<TitleScene>(L"TitleScene");
 
 		SceneManager::LoadScene(L"PlayScene");
 	}

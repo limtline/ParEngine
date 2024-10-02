@@ -34,6 +34,7 @@ namespace par
 		Gdiplus::Graphics graphcis(hdc);
 		graphcis.DrawImage(mImage, Gdiplus::Rect(pos.x, pos.y, mWidth, mHeight));
 	}
+
 	void SpriteRender::ImageLoad(const std::wstring& path)
 	{
 		mImage = Gdiplus::Image::FromFile(path.c_str());

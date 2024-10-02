@@ -26,6 +26,7 @@ namespace par
 		mDeltaTime = differenceFrequency / static_cast<float>(CpuFrequency.QuadPart); // 게임 실행 후 경과 시간 (현재 진동 수와 이전 진동 수의 차이를 cpu고유 진동수로 나눈다)
 		PreFrequency.QuadPart = CurFrequency.QuadPart;
 	}
+
 	void Time::Render(HDC hdc)
 	{
 		static float time = 0.0f;

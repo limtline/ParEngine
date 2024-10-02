@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)parApplication.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)parTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parScene.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
@@ -25,11 +23,23 @@
       <Filter>Helpers</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)parResource.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)parSpriteRender.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)parTime.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parSpriteRender.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parTransform.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parApplication.cpp">
+      <Filter>High Level Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parLayer.cpp">
+      <Filter>Layer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)parApplication.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)parTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parScene.h">
       <Filter>Scene</Filter>
     </ClInclude>
@@ -55,6 +65,24 @@
       <Filter>Helpers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)parResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parTime.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parSpriteRender.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parTransform.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parApplication.h">
+      <Filter>High Level Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parLayer.h">
+      <Filter>Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parEnums.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Scene">
@@ -71,6 +99,12 @@
     </Filter>
     <Filter Include="Helpers">
       <UniqueIdentifier>{14bfc8dd-ea66-417e-8aa2-8bf7d3804006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="High Level Interface">
+      <UniqueIdentifier>{6c3abc38-07b4-4855-a637-5fd5f857c1d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer">
+      <UniqueIdentifier>{e8517a11-8982-4091-b243-05971c3da162}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

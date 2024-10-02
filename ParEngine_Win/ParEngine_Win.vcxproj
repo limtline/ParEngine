@@ -149,10 +149,12 @@
     <ClInclude Include="parLoadScene.h" />
     <ClInclude Include="parPlayer.h" />
     <ClInclude Include="parPlayScene.h" />
+    <ClInclude Include="parTitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="parPlayer.cpp" />
     <ClCompile Include="parPlayScene.cpp" />
+    <ClCompile Include="parTitleScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
