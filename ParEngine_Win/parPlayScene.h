@@ -1,6 +1,6 @@
 #pragma once
 #include "..\\ParEngine_source\\parScene.h"
-
+// 
 namespace par
 {
 	class PlayScene : public Scene

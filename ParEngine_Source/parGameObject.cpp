@@ -1,11 +1,13 @@
 #include "parGameObject.h"
 #include "parInput.h"
 #include "parTime.h"
+#include "parTransform.h"
 
 namespace par
 {
 	GameObject::GameObject()
 	{
+		initializeTransform();
 	}
 
 	GameObject::~GameObject()
@@ -47,6 +49,11 @@ namespace par
 		{
 			comp->Render(hdc);
 		}
+	}
+
+	void GameObject::initializeTransform()
+	{
+		AddComponent<Transform>();
 	}
 
 }

@@ -6,6 +6,7 @@
 #include "parInput.h"
 #include "parTitleScene.h"
 #include "parSceneManager.h"
+#include "parObject.h"
 
 namespace par
 {
@@ -20,15 +21,19 @@ namespace par
 	void PlayScene::Initialize()
 	{
 		{
-			bg = new Player();
-			Transform* tr = bg->AddComponent<Transform>();
-			tr->SetPos(Vector2(0, 0));
-			tr->SetName(L"TR");
+			//bg = new Player();
+			//Transform* tr = bg->AddComponent<Transform>();
+			//tr->SetPosition(Vector2(0, 0));
+			//tr->SetName(L"TR");
+
+			//SpriteRender* sr = bg->AddComponent<SpriteRender>();
+			//sr->SetName(L"SR");
+			//sr->ImageLoad(L"C:\\Users\\oww90\\source\\repos\\ParEngine\\Resources\\CloudOcean.png");
+			//AddGameObject(bg, enums::eLayerType::BackGround);
+			bg = object::Instantiate<Player>(enums::eLayerType::BackGround, Vector2(100.0f,100.0f));
 
 			SpriteRender* sr = bg->AddComponent<SpriteRender>();
-			sr->SetName(L"SR");
 			sr->ImageLoad(L"C:\\Users\\oww90\\source\\repos\\ParEngine\\Resources\\CloudOcean.png");
-			AddGameObject(bg, eLayerType::BackGround);
 		}
 	}
 
@@ -60,7 +65,7 @@ namespace par
 
 	void PlayScene::OnExit()
 	{
-		Transform* tr = bg->GetComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
+		//Transform* tr = bg->GetComponent<Transform>();
+		//tr->SetPosition(Vector2(0, 0));
 	}
 }

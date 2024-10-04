@@ -1,6 +1,6 @@
 #pragma once
 
-namespace par
+namespace par::enums
 {
 	enum class eLayerType
 	{

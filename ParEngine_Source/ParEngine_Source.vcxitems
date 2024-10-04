@@ -23,6 +23,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)parInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parSceneManager.h" />

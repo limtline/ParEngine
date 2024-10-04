@@ -40,6 +40,9 @@ namespace par
 
 			return component;
 		}
+	private:
+		// GameObject 생성시 위치 초기화
+		void initializeTransform();
 
 	private:
 		std::vector<Component*> mComponents;
