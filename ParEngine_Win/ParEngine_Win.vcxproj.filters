@@ -21,6 +21,7 @@
     <ClInclude Include="parTitleScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="parLoadResources.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="parPlayScene.cpp">

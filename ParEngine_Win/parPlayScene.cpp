@@ -7,6 +7,8 @@
 #include "parTitleScene.h"
 #include "parSceneManager.h"
 #include "parObject.h"
+#include "parTexture.h"
+#include "parResources.h"
 
 namespace par
 {
@@ -20,21 +22,16 @@ namespace par
 
 	void PlayScene::Initialize()
 	{
-		{
-			//bg = new Player();
-			//Transform* tr = bg->AddComponent<Transform>();
-			//tr->SetPosition(Vector2(0, 0));
-			//tr->SetName(L"TR");
+		// 게임 오브젝트 만들기 전에 리소스들 전부 Load해두면 좋다.
+		
+		bg = object::Instantiate<Player>(enums::eLayerType::BackGround);
+		SpriteRender* sr = bg->AddComponent<SpriteRender>();
 
-			//SpriteRender* sr = bg->AddComponent<SpriteRender>();
-			//sr->SetName(L"SR");
-			//sr->ImageLoad(L"C:\\Users\\oww90\\source\\repos\\ParEngine\\Resources\\CloudOcean.png");
-			//AddGameObject(bg, enums::eLayerType::BackGround);
-			bg = object::Instantiate<Player>(enums::eLayerType::BackGround, Vector2(100.0f,100.0f));
-
-			SpriteRender* sr = bg->AddComponent<SpriteRender>();
-			sr->ImageLoad(L"C:\\Users\\oww90\\source\\repos\\ParEngine\\Resources\\CloudOcean.png");
-		}
+		graphics::Texture* bf = Resources::Find<graphics::Texture>(L"BG");
+		sr->SetTexture(bf);
+		
+		// 게임 오브젝트 생성후에 레이어와 데임오브젝트들의 init함수를 호출
+		Scene::Initialize();
 	}
 
 	void PlayScene::Update()

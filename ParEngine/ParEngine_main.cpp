@@ -5,6 +5,7 @@
 #include "ParEngine_main.h"
 #include "..\\ParEngine_Source\\parApplication.h"
 #include "..\\ParEngine_Win\\parLoadScene.h"
+#include "..\\ParEngine_Win\\parLoadResources.h"
 
 par::Application application;
 
@@ -145,6 +146,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    Gdiplus::GdiplusStartup(&gpToken, &gpsi, NULL);
 
    // load Scenes
+   par::LoadResources();
    par::LoadScenes();
 
    return TRUE;

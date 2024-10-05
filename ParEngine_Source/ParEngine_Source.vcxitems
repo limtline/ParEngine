@@ -25,9 +25,11 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)parMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parSpriteRender.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parTexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parTransform.h" />
   </ItemGroup>
@@ -40,9 +42,11 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)parInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)parResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parSpriteRender.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)parTexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parTransform.cpp" />
   </ItemGroup>

@@ -22,7 +22,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)parInput.cpp">
       <Filter>Helpers</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)parResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parTime.cpp">
       <Filter>Helpers</Filter>
     </ClCompile>
@@ -37,6 +36,15 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)parLayer.cpp">
       <Filter>Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parTexture.cpp">
+      <Filter>Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parResources.cpp">
+      <Filter>Resource</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -64,7 +72,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)parInput.h">
       <Filter>Helpers</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)parResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parTime.h">
       <Filter>Helpers</Filter>
     </ClInclude>
@@ -85,6 +92,15 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)parObject.h">
       <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parTexture.h">
+      <Filter>Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parResources.h">
+      <Filter>Resource</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +124,12 @@
     </Filter>
     <Filter Include="Layer">
       <UniqueIdentifier>{e8517a11-8982-4091-b243-05971c3da162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{cee51b7c-cd02-4a75-94a3-c17e18a102c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Texture">
+      <UniqueIdentifier>{2d7f14a9-c1c3-452c-bdb9-ecd116e85dcb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
