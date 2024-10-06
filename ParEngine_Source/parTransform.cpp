@@ -3,6 +3,7 @@
 namespace par
 {
 	Transform::Transform()
+		: Component(enums::eComponentType::Transform)
 	{
 	}
 

@@ -16,6 +16,7 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parCamera.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parEnums.h" />
@@ -24,16 +25,19 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)parLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parScript.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parSpriteRender.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parTexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parTransform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parCamera.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parComponent.cpp" />
@@ -41,10 +45,12 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)parGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)parRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)parScript.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parSpriteRender.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parTexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parTime.cpp" />

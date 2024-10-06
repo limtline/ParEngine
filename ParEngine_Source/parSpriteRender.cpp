@@ -2,11 +2,12 @@
 #include "parGameObject.h"
 #include "parTransform.h"
 #include "parTexture.h"
+#include "parRenderer.h"
 
 namespace par
 {
 	SpriteRender::SpriteRender()
-		: Component(),
+		: Component(enums::eComponentType::SpriteRenderer),
 		mTexture(nullptr),
 		mSize(Vector2::One)
 	{
@@ -35,7 +36,8 @@ namespace par
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
-		
+		pos = renderer::mainCamera->CaluatePosition(pos);
+
 		// 이미지 그려주는 부분
 		if (mTexture->GetTextureType() == graphics::Texture::eTextureType::Bmp)
 		{

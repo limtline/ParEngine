@@ -7,6 +7,9 @@
     <Filter Include="Contents">
       <UniqueIdentifier>{1eadb0cc-fcfc-46ec-8da5-754a4495f476}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{74c00db0-0d59-4127-a004-868936ce30dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="parLoadScene.h">
@@ -22,6 +25,9 @@
       <Filter>Scenes</Filter>
     </ClInclude>
     <ClInclude Include="parLoadResources.h" />
+    <ClInclude Include="parPlayerScript.h">
+      <Filter>Script</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="parPlayScene.cpp">
@@ -32,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="parTitleScene.cpp">
       <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="parPlayerScript.cpp">
+      <Filter>Script</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

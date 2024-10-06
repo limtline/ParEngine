@@ -9,6 +9,9 @@
 #include "parObject.h"
 #include "parTexture.h"
 #include "parResources.h"
+#include "parPlayerScript.h"
+#include "parCamera.h"
+#include "parRenderer.h"
 
 namespace par
 {
@@ -22,13 +25,29 @@ namespace par
 
 	void PlayScene::Initialize()
 	{
-		// 게임 오브젝트 만들기 전에 리소스들 전부 Load해두면 좋다.
-		
-		bg = object::Instantiate<Player>(enums::eLayerType::BackGround);
-		SpriteRender* sr = bg->AddComponent<SpriteRender>();
+		// main camera
+		GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None, Vector2(344.0f, 442.0f));
+		Camera* cameraComp = camera->AddComponent<Camera>();
+		renderer::mainCamera = cameraComp;
+		//camera->AddComponent<PlayerScript>(); // 카메라 이동
 
-		graphics::Texture* bf = Resources::Find<graphics::Texture>(L"BG");
-		sr->SetTexture(bf);
+		// 게임 오브젝트 만들기 전에 리소스들 전부 Load해두면 좋다.
+		// player
+		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
+		SpriteRender* sr = mPlayer->AddComponent<SpriteRender>();
+		sr->SetSize(Vector2(3.0f, 3.0f));
+		mPlayer->AddComponent<PlayerScript>();
+
+		graphics::Texture* pacmanTexture = Resources::Find<graphics::Texture>(L"PackMan");
+		sr->SetTexture(pacmanTexture);
+
+		// map
+		GameObject* bg = object::Instantiate<GameObject>(enums::eLayerType::BackGround);
+		SpriteRender* bgsr = bg->AddComponent<SpriteRender>();
+		bgsr->SetSize(Vector2(3.0f, 3.0f));
+
+		graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"Map");
+		bgsr->SetTexture(bgTexture);
 		
 		// 게임 오브젝트 생성후에 레이어와 데임오브젝트들의 init함수를 호출
 		Scene::Initialize();
@@ -52,8 +71,8 @@ namespace par
 	void PlayScene::Render(HDC hdc)
 	{
 		Scene::Render(hdc);
-		wchar_t str[50] = L"Play Scene";
-		TextOut(hdc, 0, 0, str, 10);
+		//wchar_t str[50] = L"Play Scene";
+		//TextOut(hdc, 0, 0, str, 10);
 	}
 
 	void PlayScene::OnEnter()
@@ -62,7 +81,7 @@ namespace par
 
 	void PlayScene::OnExit()
 	{
-		//Transform* tr = bg->GetComponent<Transform>();
+		//Transform* tr = mPlayer->GetComponent<Transform>();
 		//tr->SetPosition(Vector2(0, 0));
 	}
 }

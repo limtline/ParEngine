@@ -25,12 +25,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)parTime.cpp">
       <Filter>Helpers</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)parSpriteRender.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)parTransform.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)parApplication.cpp">
       <Filter>High Level Interface</Filter>
     </ClCompile>
@@ -45,6 +39,21 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)parResources.cpp">
       <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parScript.cpp">
+      <Filter>Component\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parTransform.cpp">
+      <Filter>Component\Tranform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parSpriteRender.cpp">
+      <Filter>Component\SpriteRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parCamera.cpp">
+      <Filter>Component\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parRenderer.cpp">
+      <Filter>Renderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -75,12 +84,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)parTime.h">
       <Filter>Helpers</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)parSpriteRender.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)parTransform.h">
-      <Filter>Component</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)parApplication.h">
       <Filter>High Level Interface</Filter>
     </ClInclude>
@@ -101,6 +104,21 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)parResources.h">
       <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parScript.h">
+      <Filter>Component\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parTransform.h">
+      <Filter>Component\Tranform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parSpriteRender.h">
+      <Filter>Component\SpriteRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parCamera.h">
+      <Filter>Component\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parRenderer.h">
+      <Filter>Renderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +148,21 @@
     </Filter>
     <Filter Include="Resource\Texture">
       <UniqueIdentifier>{2d7f14a9-c1c3-452c-bdb9-ecd116e85dcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Script">
+      <UniqueIdentifier>{002cfb53-4982-468b-929e-cca08f912ac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Tranform">
+      <UniqueIdentifier>{fe22ea29-d125-4d8b-86fc-bca2a0bee6cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\SpriteRenderer">
+      <UniqueIdentifier>{2f867212-8dfc-4057-97e7-97b38f34cdd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Camera">
+      <UniqueIdentifier>{8cc9b7c4-1a23-4189-9717-1e501cddfd38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{c92287ba-2f0f-4c1f-95db-13bfb1100020}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

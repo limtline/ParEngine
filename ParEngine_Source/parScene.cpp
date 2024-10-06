@@ -68,6 +68,7 @@ namespace par
 	{
 		mLayers[(UINT)type]->AddGameObject(gameObj);
 	}
+
 	void Scene::createLayers()
 	{
 		mLayers.resize((UINT)enums::eLayerType::Max);

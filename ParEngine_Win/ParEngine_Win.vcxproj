@@ -149,11 +149,13 @@
     <ClInclude Include="parLoadResources.h" />
     <ClInclude Include="parLoadScene.h" />
     <ClInclude Include="parPlayer.h" />
+    <ClInclude Include="parPlayerScript.h" />
     <ClInclude Include="parPlayScene.h" />
     <ClInclude Include="parTitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="parPlayer.cpp" />
+    <ClCompile Include="parPlayerScript.cpp" />
     <ClCompile Include="parPlayScene.cpp" />
     <ClCompile Include="parTitleScene.cpp" />
   </ItemGroup>
