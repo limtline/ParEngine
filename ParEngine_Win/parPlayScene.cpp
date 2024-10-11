@@ -12,6 +12,7 @@
 #include "parPlayerScript.h"
 #include "parCamera.h"
 #include "parRenderer.h"
+#include "parAnimator.h"
 
 namespace par
 {
@@ -34,14 +35,18 @@ namespace par
 		// 게임 오브젝트 만들기 전에 리소스들 전부 Load해두면 좋다.
 		// player
 		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
-		SpriteRender* sr = mPlayer->AddComponent<SpriteRender>();
-		sr->SetSize(Vector2(3.0f, 3.0f));
+		//SpriteRender* sr = mPlayer->AddComponent<SpriteRender>();
+		//sr->SetSize(Vector2(3.0f, 3.0f));
 		mPlayer->AddComponent<PlayerScript>();
 
-		graphics::Texture* pacmanTexture = Resources::Find<graphics::Texture>(L"PackMan");
-		sr->SetTexture(pacmanTexture);
+		graphics::Texture* pacmanTexture = Resources::Find<graphics::Texture>(L"Cat");
+		Animator* animator = mPlayer->AddComponent<Animator>();
+		animator->CreateAnimation(L"CatFrontMove", pacmanTexture,
+									Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.5f);
+		animator->PlayAnimation(L"CatFrontMove", true);
+		//sr->SetTexture(pacmanTexture);
 
-		// map
+		// map, background
 		GameObject* bg = object::Instantiate<GameObject>(enums::eLayerType::BackGround);
 		SpriteRender* bgsr = bg->AddComponent<SpriteRender>();
 		bgsr->SetSize(Vector2(3.0f, 3.0f));

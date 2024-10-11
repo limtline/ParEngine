@@ -123,6 +123,7 @@
       <CallingConvention>Cdecl</CallingConvention>
       <CompileAsManaged>
       </CompileAsManaged>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -141,6 +142,7 @@
       <CallingConvention>Cdecl</CallingConvention>
       <CompileAsManaged>
       </CompileAsManaged>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -169,6 +171,9 @@
     <ProjectReference Include="..\ParEngine_Win\ParEngine_Win.vcxproj">
       <Project>{53bec884-728c-4d53-8ac9-0a7d3c253c8f}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

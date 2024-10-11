@@ -15,6 +15,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parAnimation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)parAnimator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parCamera.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)parComponent.h" />
@@ -37,6 +39,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)parTransform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parAnimation.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)parAnimator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parCamera.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)parApplication.cpp" />

@@ -10,9 +10,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)parGameObject.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)parComponent.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)parMath.cpp">
       <Filter>Common</Filter>
     </ClCompile>
@@ -31,14 +28,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)parLayer.cpp">
       <Filter>Layer</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)parResource.cpp">
-      <Filter>Resource</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)parTexture.cpp">
       <Filter>Resource\Texture</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)parResources.cpp">
-      <Filter>Resource</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)parScript.cpp">
       <Filter>Component\Script</Filter>
@@ -55,6 +46,21 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)parRenderer.cpp">
       <Filter>Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parComponent.cpp">
+      <Filter>Component\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parResources.cpp">
+      <Filter>Resource\Resouces</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parAnimator.cpp">
+      <Filter>Component\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)parAnimation.cpp">
+      <Filter>Resource\Animation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)parScene.h">
@@ -68,9 +74,6 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)parGameObject.h">
       <Filter>GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)parComponent.h">
-      <Filter>Component</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)parMath.h">
       <Filter>Common</Filter>
@@ -96,14 +99,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)parObject.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)parResource.h">
-      <Filter>Resource</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)parTexture.h">
       <Filter>Resource\Texture</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)parResources.h">
-      <Filter>Resource</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)parScript.h">
       <Filter>Component\Script</Filter>
@@ -119,6 +116,21 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)parRenderer.h">
       <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parComponent.h">
+      <Filter>Component\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parResources.h">
+      <Filter>Resource\Resouces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parAnimator.h">
+      <Filter>Component\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)parAnimation.h">
+      <Filter>Resource\Animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +175,18 @@
     </Filter>
     <Filter Include="Renderer">
       <UniqueIdentifier>{c92287ba-2f0f-4c1f-95db-13bfb1100020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Component">
+      <UniqueIdentifier>{28a8082c-4bf0-4ff3-8cb8-103bd846b13e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Resouces">
+      <UniqueIdentifier>{b8be124d-9db9-4f70-927a-45910e494f46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Animator">
+      <UniqueIdentifier>{4dd5b93c-7688-481d-8806-8c44f27b7829}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Animation">
+      <UniqueIdentifier>{3f047906-66fa-4467-98fc-3f4b77be6d33}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

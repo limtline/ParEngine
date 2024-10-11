@@ -6,6 +6,7 @@ namespace par::enums
 	{
 		Transform,
 		SpriteRenderer,
+		Animator,
 		Script,
 		Camera,
 		End,
@@ -25,6 +26,7 @@ namespace par::enums
 	{
 		Texture,	// 이미지
 		AudioClip,	// 사운드
+		Animation,	// 애니메이션
 		Prefab,		// 데이터 저장
 		End,
 	};

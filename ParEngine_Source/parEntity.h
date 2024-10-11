@@ -1,6 +1,8 @@
 #pragma once
 #include "CommonInclude.h"
 
+using namespace par::math;
+
 // 이름 설정 클래스 
 namespace par
 {
