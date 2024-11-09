@@ -16,6 +16,7 @@ namespace par
 
 	void Animator::Initialize()
 	{
+		
 	}
 
 	void Animator::Update()

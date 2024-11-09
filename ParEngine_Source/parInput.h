@@ -32,7 +32,7 @@ namespace par
 		static void Update();
 
 		static bool GetKeyDown(eKeyCode code) { return Keys[(UINT)code].state == eKeyState::Down; }
-		static bool GetKeyUP(eKeyCode code) { return Keys[(UINT)code].state == eKeyState::Up; }
+		static bool GetKeyUp(eKeyCode code) { return Keys[(UINT)code].state == eKeyState::Up; }
 		static bool GetKey(eKeyCode code) { return Keys[(UINT)code].state == eKeyState::Pressed; }
 
 	private:

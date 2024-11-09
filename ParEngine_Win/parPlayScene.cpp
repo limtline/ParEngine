@@ -41,17 +41,38 @@ namespace par
 
 		graphics::Texture* pacmanTexture = Resources::Find<graphics::Texture>(L"Cat");
 		Animator* animator = mPlayer->AddComponent<Animator>();
-		animator->CreateAnimation(L"CatFrontMove", pacmanTexture,
-									Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.5f);
-		animator->PlayAnimation(L"CatFrontMove", true);
+		animator->CreateAnimation(L"DownWalk", pacmanTexture,
+			Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"RightWalk", pacmanTexture,
+			Vector2(0.0f, 32.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"UpWalk", pacmanTexture,
+			Vector2(0.0f, 64.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"LeftWalk", pacmanTexture,
+			Vector2(0.0f, 96.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"SitDown", pacmanTexture,
+			Vector2(0.0f, 128.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"Grooming", pacmanTexture,
+			Vector2(0.0f, 160.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+
+		animator->PlayAnimation(L"SitDown", false);
+
+		//graphics::Texture* pacmanTexture = Resources::Find<graphics::Texture>(L"MapleEffect");
+		//Animator* animator = mPlayer->AddComponent<Animator>();
+		//animator->CreateAnimation(L"CatFrontMove", pacmanTexture,
+		//							Vector2(0.0f, 0.0f), Vector2(386.0f, 246.0f), Vector2::Zero, 8, 0.1f);
+		//animator->PlayAnimation(L"CatFrontMove", true);
+		
+		mPlayer->GetComponent<Transform>()->SetPosition(Vector2(100.0f, 100.0f));
+		mPlayer->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
+		mPlayer->GetComponent<Transform>()->SetRotation(30.0f);
 		//sr->SetTexture(pacmanTexture);
 
 		// map, background
 		GameObject* bg = object::Instantiate<GameObject>(enums::eLayerType::BackGround);
 		SpriteRender* bgsr = bg->AddComponent<SpriteRender>();
-		bgsr->SetSize(Vector2(3.0f, 3.0f));
+		//bgsr->SetSize(Vector2(3.0f, 3.0f));
 
-		graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"Map");
+		graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"Bubble");
 		bgsr->SetTexture(bgTexture);
 		
 		// 게임 오브젝트 생성후에 레이어와 데임오브젝트들의 init함수를 호출
