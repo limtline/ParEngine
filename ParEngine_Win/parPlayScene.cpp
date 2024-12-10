@@ -13,6 +13,8 @@
 #include "parCamera.h"
 #include "parRenderer.h"
 #include "parAnimator.h"
+#include "parCat.h"
+#include "parCatScript.h"
 
 namespace par
 {
@@ -64,16 +66,41 @@ namespace par
 		
 		mPlayer->GetComponent<Transform>()->SetPosition(Vector2(100.0f, 100.0f));
 		mPlayer->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
-		mPlayer->GetComponent<Transform>()->SetRotation(30.0f);
+		//mPlayer->GetComponent<Transform>()->SetRotation(30.0f);
 		//sr->SetTexture(pacmanTexture);
 
-		// map, background
-		GameObject* bg = object::Instantiate<GameObject>(enums::eLayerType::BackGround);
-		SpriteRender* bgsr = bg->AddComponent<SpriteRender>();
-		//bgsr->SetSize(Vector2(3.0f, 3.0f));
+		//// map, background
+		//GameObject* bg = object::Instantiate<GameObject>(enums::eLayerType::BackGround);
+		//SpriteRender* bgsr = bg->AddComponent<SpriteRender>();
+		////bgsr->SetSize(Vector2(3.0f, 3.0f));
 
-		graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"Bubble");
-		bgsr->SetTexture(bgTexture);
+		//graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"Bubble");
+		//bgsr->SetTexture(bgTexture);
+
+		// Cat
+		Cat* cat = object::Instantiate<Cat>(enums::eLayerType::Animal);
+		cat->AddComponent<CatScript>();
+
+		graphics::Texture* catTex = Resources::Find<graphics::Texture>(L"Cat");
+		Animator* catanimator = cat->AddComponent<Animator>();
+		catanimator->CreateAnimation(L"DownWalk", catTex,
+			Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catanimator->CreateAnimation(L"RightWalk", catTex,
+			Vector2(0.0f, 32.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catanimator->CreateAnimation(L"UpWalk", catTex,
+			Vector2(0.0f, 64.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catanimator->CreateAnimation(L"LeftWalk", catTex,
+			Vector2(0.0f, 96.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catanimator->CreateAnimation(L"SitDown", catTex,
+			Vector2(0.0f, 128.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catanimator->CreateAnimation(L"Grooming", catTex,
+			Vector2(0.0f, 160.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catanimator->CreateAnimation(L"LayDown", catTex,
+			Vector2(0.0f, 192.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+
+		catanimator->PlayAnimation(L"SitDown", false);
+		cat->GetComponent<Transform>()->SetPosition(Vector2(200.0f, 200.0f));
+		cat->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
 		
 		// 게임 오브젝트 생성후에 레이어와 데임오브젝트들의 init함수를 호출
 		Scene::Initialize();

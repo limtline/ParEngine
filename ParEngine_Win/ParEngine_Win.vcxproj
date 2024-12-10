@@ -148,6 +148,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="parCat.h" />
+    <ClInclude Include="parCatScript.h" />
     <ClInclude Include="parLoadResources.h" />
     <ClInclude Include="parLoadScene.h" />
     <ClInclude Include="parPlayer.h" />
@@ -156,6 +158,8 @@
     <ClInclude Include="parTitleScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="parCat.cpp" />
+    <ClCompile Include="parCatScript.cpp" />
     <ClCompile Include="parPlayer.cpp" />
     <ClCompile Include="parPlayerScript.cpp" />
     <ClCompile Include="parPlayScene.cpp" />

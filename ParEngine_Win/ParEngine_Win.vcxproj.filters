@@ -28,6 +28,12 @@
     <ClInclude Include="parPlayerScript.h">
       <Filter>Script</Filter>
     </ClInclude>
+    <ClInclude Include="parCat.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="parCatScript.h">
+      <Filter>Script</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="parPlayScene.cpp">
@@ -40,6 +46,12 @@
       <Filter>Scenes</Filter>
     </ClCompile>
     <ClCompile Include="parPlayerScript.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="parCat.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="parCatScript.cpp">
       <Filter>Script</Filter>
     </ClCompile>
   </ItemGroup>
