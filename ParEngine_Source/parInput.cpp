@@ -1,8 +1,12 @@
 #include "parInput.h"
+#include "parApplication.h"
+
+extern par::Application application;
 
 namespace par
 {
 	std::vector<Input::Key> Input::Keys = {};
+	math::Vector2 Input::mMousePosition = math::Vector2::One;
 
 	int ASCII[(UINT)eKeyCode::End] =
 	{
@@ -10,6 +14,7 @@ namespace par
 		'A','S','D','F','G','H','J','K','L',
 		'Z','X','C','V','B','N','M',
 		VK_LEFT, VK_RIGHT, VK_DOWN, VK_UP,
+		VK_LBUTTON, VK_MBUTTON, VK_RBUTTON,
 	};
 	void Input::Initailize()
 	{
@@ -43,13 +48,18 @@ namespace par
 	}
 	void Input::UpdateKey(Input::Key& key)
 	{
-		if (IsKeyDown(key.keyCode))
+		if (GetFocus())	// 게임 윈도우 에서만 입력처리 하겠다.
 		{
-			UpdateKeyDown(key);
+			if (IsKeyDown(key.keyCode))
+				UpdateKeyDown(key);
+			else
+				UpdateKeyUp(key);
+
+			getMousePositionByWindow();
 		}
 		else
 		{
-			UpdateKeyUp(key);
+			clearKeys();
 		}
 	}
 	bool Input::IsKeyDown(eKeyCode code)
@@ -77,5 +87,26 @@ namespace par
 			key.state = eKeyState::None;	// 애초에 안눌렀을 때
 
 		key.bPressed = false;
+	}
+	void Input::getMousePositionByWindow()
+	{
+		POINT mousePos = {};
+		GetCursorPos(&mousePos);
+		ScreenToClient(application.GetHwnd(), &mousePos);
+
+		mMousePosition.x = mousePos.x;
+		mMousePosition.y = mousePos.y;
+	}
+	void Input::clearKeys()
+	{
+		for (Key& key : Keys)
+		{
+			if (key.state == eKeyState::Down || key.state == eKeyState::Pressed)
+				key.state = eKeyState::Up;
+			else if (key.state == eKeyState::Up)
+				key.state = eKeyState::None;
+
+			key.bPressed = false;
+		}
 	}
 }

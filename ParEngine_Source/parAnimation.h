@@ -31,7 +31,7 @@ namespace par
 		void Reset();
 
 		bool IsComplete() { return mbComplete; }
-		void SetAnimator(class Animator* animator) { mAnimator = animator; }
+		void SetAnimator(class Animator* Animator) { mAnimator = Animator; }
 
 	private:
 		class Animator* mAnimator;

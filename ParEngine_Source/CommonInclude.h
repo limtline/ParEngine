@@ -2,11 +2,13 @@
 
 #include <Windows.h>
 #include <assert.h>
+#include <iostream>
 
 #include <vector>
 #include <algorithm>
 #include <string>
 #include <map>
+#include <functional>
 
 #include "parMath.h"
 
